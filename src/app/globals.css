@@ -1,0 +1,224 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Cinematic Cosmos Color Palette */
+  --color-galaxy-darker: #03050c;
+  --color-galaxy-dark: #070b18;
+  --color-galaxy-light: #111a33;
+  --color-primary: #8154ff;
+  --color-primary-light: #a78bfa;
+  --color-secondary: #38bdf8;
+  --color-accent: #f43f5e;
+  --color-nebula-warm: #f97316;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-glass-bg: rgba(255, 255, 255, 0.03);
+  --color-glass-border: rgba(255, 255, 255, 0.07);
+
+  /* Fonts */
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-space-grotesk);
+}
+
+/* Badge/pill utility — guaranteed text never clips */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding-top: 0.625em;
+  padding-bottom: 0.625em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+html {
+  scroll-behavior: auto;
+  color-scheme: dark;
+}
+
+body {
+  background: var(--color-galaxy-darker);
+  color: var(--color-text-primary);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+@media (pointer: coarse) {
+  body {
+    cursor: auto;
+  }
+}
+
+/* Selection */
+::selection {
+  background: rgba(129, 84, 255, 0.35);
+  color: #ffffff;
+}
+
+/* Luxury Subtle Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #03050c;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(129, 84, 255, 0.5);
+}
+
+/* Frosted Obsidian Glass */
+.glass {
+  background: rgba(7, 11, 24, 0.72);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(5, 8, 20, 0.82);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 24px 64px -12px rgba(0, 0, 0, 0.75);
+}
+
+/* Hero name line reveal — CSS keyframe animation for rock-solid completion */
+.hero-name-line {
+  display: inline-block;
+  animation: hero-name-line-reveal 1s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.hero-name-line:nth-child(1) {
+  animation-delay: 0.25s;
+}
+.hero-name-line:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.hero-name-line:nth-child(3) {
+  animation-delay: 0.55s;
+}
+.hero-name-line:nth-child(4) {
+  animation-delay: 0.7s;
+}
+
+@keyframes hero-name-line-reveal {
+  from {
+    transform: translateY(110px) skewY(5deg);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) skewY(0);
+    opacity: 1;
+  }
+}
+
+/* Hero name — Clean platinum starlight gradient with subtle shimmer */
+.hero-name {
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #f1f5f9 40%,
+    #cbd5e1 70%,
+    #94a3b8 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 0% center;
+  }
+  50% {
+    background-position: 100% center;
+  }
+  100% {
+    background-position: 0% center;
+  }
+}
+
+/* Refined Section Headings Gradient */
+.gradient-text {
+  background: linear-gradient(
+    135deg,
+    #ffffff 20%,
+    #e2e8f0 55%,
+    #a78bfa 100%
+  );
+  background-size: 150% 150%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Section Spacing */
+.section-padding {
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: 7.5rem 3rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .section-padding {
+    padding: 9.5rem 6rem;
+  }
+}
+
+/* Focus Ring */
+*:focus-visible {
+  outline: 2px solid var(--color-primary-light);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Skip to Main Content */
+.skip-to-main {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.skip-to-main:focus {
+  position: fixed;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: auto;
+  height: auto;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  z-index: 100;
+}
+
+/* Respect Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

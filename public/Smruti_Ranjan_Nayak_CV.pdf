@@ -1,0 +1,255 @@
+%PDF-1.4
+%‚„œ”
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 5905 >>
+stream
+BT
+/F2 16 Tf
+40 800 Td
+(SMRUTI RANJAN NAYAK) Tj
+-40 -800 Td
+/F1 11 Tf
+40 781 Td
+(AI/ML Practitioner & Full-Stack Developer | DEV SHOWCASE) Tj
+-40 -781 Td
+/F1 9 Tf
+40 767.5 Td
+(Email: smrutiranjan2412@gmail.com | Portfolio: https://smrutiranjan-portfolio.vercel.app/) Tj
+-40 -767.5 Td
+/F1 9 Tf
+40 756.0 Td
+(GitHub: https://github.com/SMRU08 | LinkedIn: https://www.linkedin.com/in/smruti-ranjan-nayak-67a733360) Tj
+-40 -756.0 Td
+/F1 9 Tf
+40 744.5 Td
+(----------------------------------------------------------------------------------------------------) Tj
+-40 -744.5 Td
+/F2 12 Tf
+40 733.0 Td
+(EDUCATION) Tj
+-40 -733.0 Td
+/F2 10 Tf
+40 718.0 Td
+( * B.Tech Computer Science & Engineering \(2024 - 2028\)) Tj
+-40 -718.0 Td
+/F1 9 Tf
+40 705.5 Td
+(   Synergy Institute of Engineering & Technology, Dhenkanal | CGPA: 7.5 through 2nd Year) Tj
+-40 -705.5 Td
+/F2 10 Tf
+40 694.0 Td
+( * Higher Secondary - Class 12 Science, CHSE Odisha \(2024\)) Tj
+-40 -694.0 Td
+/F1 9 Tf
+40 681.5 Td
+(   Sri Aurobinda Science Higher Secondary School, Cuttack | First Division) Tj
+-40 -681.5 Td
+/F2 10 Tf
+40 670.0 Td
+( * Secondary School - Class 10, BSE Odisha \(2022\)) Tj
+-40 -670.0 Td
+/F1 9 Tf
+40 657.5 Td
+(   Indipur High School, Dhenkanal | Distinction) Tj
+-40 -657.5 Td
+/F1 9 Tf
+40 646.0 Td
+(----------------------------------------------------------------------------------------------------) Tj
+-40 -646.0 Td
+/F2 12 Tf
+40 634.5 Td
+(FEATURED PROJECTS) Tj
+-40 -634.5 Td
+/F2 10 Tf
+40 619.5 Td
+( * SafeSync - AI Vision-Based Industrial Safety Monitoring \(BPUT Hackathon 2026\)) Tj
+-40 -619.5 Td
+/F1 9 Tf
+40 607.0 Td
+(   Technologies: Python, FastAPI, React 18, TypeScript, Vite, Computer Vision. 306 passing tests.) Tj
+-40 -607.0 Td
+/F1 9 Tf
+40 595.5 Td
+(   Real-time computer vision for workplace PPE compliance, combustion detection & risk assessment.) Tj
+-40 -595.5 Td
+/F1 9 Tf
+40 584.0 Td
+(   Demo: https://safesync-xerses.vercel.app | Repo: https://github.com/SMRU08/SafeSync) Tj
+-40 -584.0 Td
+/F2 10 Tf
+40 572.5 Td
+( * JANBHASHA - Offline AI Vernacular Pedagogy Platform \(Smart India Hackathon SIH 2026\)) Tj
+-40 -572.5 Td
+/F1 9 Tf
+40 560.0 Td
+(   Technologies: React Native, TypeScript, Python, ONNX Runtime Mobile, Kotlin, C++17 JSI, Edge AI.) Tj
+-40 -560.0 Td
+/F1 9 Tf
+40 548.5 Td
+(   100% air-gapped on-device neural translation for Santali \(Ol Chiki\), Ho & Mundari for primary schools.) Tj
+-40 -548.5 Td
+/F1 9 Tf
+40 537.0 Td
+(   Repo: https://github.com/SMRU08/JANBHASHA) Tj
+-40 -537.0 Td
+/F2 10 Tf
+40 525.5 Td
+( * Face Recognition Attendance System \(CTTC Capstone\)) Tj
+-40 -525.5 Td
+/F1 9 Tf
+40 513.0 Td
+(   Technologies: Python, OpenCV, Machine Learning, Keras, Computer Vision.) Tj
+-40 -513.0 Td
+/F1 9 Tf
+40 501.5 Td
+(   Real-time automated face detection and verification attendance tracking system.) Tj
+-40 -501.5 Td
+/F2 10 Tf
+40 490.0 Td
+( * Real-Time Emotion Detection) Tj
+-40 -490.0 Td
+/F1 9 Tf
+40 477.5 Td
+(   Technologies: Python, OpenCV, NumPy, TensorFlow, Keras, Computer Vision.) Tj
+-40 -477.5 Td
+/F1 9 Tf
+40 466.0 Td
+(   Facial landmark analysis and real-time expression recognition using deep learning.) Tj
+-40 -466.0 Td
+/F2 10 Tf
+40 454.5 Td
+( * Personal Portfolio Website) Tj
+-40 -454.5 Td
+/F1 9 Tf
+40 442.0 Td
+(   Technologies: React, Vite, JavaScript, Tailwind CSS, Framer Motion, GSAP, Lenis.) Tj
+-40 -442.0 Td
+/F1 9 Tf
+40 430.5 Td
+(   Demo: https://smrutiranjan-portfolio.vercel.app/ | Repo: https://github.com/SMRU08) Tj
+-40 -430.5 Td
+/F1 9 Tf
+40 419.0 Td
+(----------------------------------------------------------------------------------------------------) Tj
+-40 -419.0 Td
+/F2 12 Tf
+40 407.5 Td
+(INTERNSHIP EXPERIENCE) Tj
+-40 -407.5 Td
+/F2 10 Tf
+40 392.5 Td
+( * Artificial Intelligence & Machine Learning Intern \(16 June 2026 - 15 July 2026\)) Tj
+-40 -392.5 Td
+/F1 9 Tf
+40 380.0 Td
+(   Central Tool Room & Training Centre \(CTTC\), Bhubaneswar) Tj
+-40 -380.0 Td
+/F1 9 Tf
+40 368.5 Td
+(   Topics: Python, Machine Learning, NLP, Computer Vision, Deep Learning using Keras.) Tj
+-40 -368.5 Td
+/F1 9 Tf
+40 357.0 Td
+(   Capstone Project: Face Recognition Attendance System.) Tj
+-40 -357.0 Td
+/F1 9 Tf
+40 345.5 Td
+(----------------------------------------------------------------------------------------------------) Tj
+-40 -345.5 Td
+/F2 12 Tf
+40 334.0 Td
+(TECHNICAL SKILLS) Tj
+-40 -334.0 Td
+/F1 9 Tf
+40 319.0 Td
+( * Programming & Core: C, C++, Python, Java, HTML, CSS, JavaScript, TypeScript, Node.js, FastAPI, SQL.) Tj
+-40 -319.0 Td
+/F1 9 Tf
+40 307.5 Td
+( * AI / ML / Vision: OpenCV, NumPy, TensorFlow, Keras, ONNX Runtime, Machine Learning, Deep Learning, NLP.) Tj
+-40 -307.5 Td
+/F1 9 Tf
+40 296.0 Td
+( * Frontend & Mobile: React, React Native, Vite, Tailwind CSS, Framer Motion, GSAP, Lenis.) Tj
+-40 -296.0 Td
+/F1 9 Tf
+40 284.5 Td
+( * Tools & Platforms: Git, GitHub, VS Code.) Tj
+-40 -284.5 Td
+/F1 9 Tf
+40 273.0 Td
+(----------------------------------------------------------------------------------------------------) Tj
+-40 -273.0 Td
+/F2 12 Tf
+40 261.5 Td
+(CERTIFICATIONS) Tj
+-40 -261.5 Td
+/F1 9 Tf
+40 246.5 Td
+( * Managing Machine Learning Projects \(Coursera - Mar 2024\)) Tj
+-40 -246.5 Td
+/F1 9 Tf
+40 235.0 Td
+( * Introduction to Machine Learning \(Coursera - Mar 2024\)) Tj
+-40 -235.0 Td
+/F1 9 Tf
+40 223.5 Td
+( * Data Science in Python \(University of Michigan - Mar 2024\)) Tj
+-40 -223.5 Td
+/F1 9 Tf
+40 212.0 Td
+( * Introduction to Big Data \(UC San Diego - Apr 2024\)) Tj
+-40 -212.0 Td
+/F1 9 Tf
+40 200.5 Td
+( * Programming for Everybody - Python \(Coursera - Apr 2024\)) Tj
+-40 -200.5 Td
+/F1 9 Tf
+40 189.0 Td
+( * Play It Safe: Manage Security Risks \(Google - Apr 2024\)) Tj
+-40 -189.0 Td
+/F1 9 Tf
+40 177.5 Td
+( * AI Strategic Approach to Cybersecurity \(Coursera - Mar 2024\)) Tj
+-40 -177.5 Td
+/F1 9 Tf
+40 166.0 Td
+( * Introduction to Artificial Intelligence \(IBM - Mar 2024\)) Tj
+-40 -166.0 Td
+/F1 9 Tf
+40 154.5 Td
+( * Cybersecurity Essentials \(IBM - Apr 2024\)) Tj
+-40 -154.5 Td
+ET
+
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000015 00000 n 
+0000000064 00000 n 
+0000000121 00000 n 
+0000000257 00000 n 
+0000006214 00000 n 
+0000006284 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+6359
+%%EOF
