@@ -15,38 +15,52 @@ export default function Hero() {
 
   useGSAP(
     () => {
-      const tl = gsap.timeline({ delay: 0.2 });
+      const tl = gsap.timeline({ delay: 0.15 });
       const SAFETY_SELECTORS =
-        ".hero-badge, .hero-title, .hero-subtitle, .hero-cta-btn, .hero-scroll, .hero-decoration";
+        ".hero-heading, .hero-title, .hero-tagline, .hero-desc, .hero-cta-btn, .hero-scroll, .hero-decoration";
 
-      tl.from(".hero-badge", {
-        scale: 0.85,
-        duration: 0.7,
+      tl.from(".hero-heading", {
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
         ease: "power3.out",
       })
         .from(
           ".hero-title",
           {
-            y: 35,
-            duration: 0.8,
-            ease: "power3.out",
-          },
-          "-=0.45"
-        )
-        .from(
-          ".hero-subtitle",
-          {
-            y: 25,
-            duration: 0.7,
+            y: 18,
+            opacity: 0,
+            duration: 0.6,
             ease: "power3.out",
           },
           "-=0.4"
         )
         .from(
+          ".hero-tagline",
+          {
+            y: 14,
+            opacity: 0,
+            duration: 0.55,
+            ease: "power3.out",
+          },
+          "-=0.35"
+        )
+        .from(
+          ".hero-desc",
+          {
+            y: 14,
+            opacity: 0,
+            duration: 0.55,
+            ease: "power3.out",
+          },
+          "-=0.35"
+        )
+        .from(
           ".hero-cta-btn",
           {
-            y: 20,
-            scale: 0.95,
+            y: 16,
+            scale: 0.96,
+            opacity: 0,
             duration: 0.5,
             ease: "back.out(1.4)",
             stagger: 0.1,
@@ -56,8 +70,9 @@ export default function Hero() {
         .from(
           ".hero-scroll",
           {
-            y: -8,
-            duration: 0.6,
+            y: -6,
+            opacity: 0,
+            duration: 0.55,
           },
           "-=0.2"
         )
@@ -65,6 +80,7 @@ export default function Hero() {
           ".hero-decoration",
           {
             scale: 0.6,
+            opacity: 0,
             duration: 1.0,
             ease: "power2.out",
             stagger: 0.12,
@@ -87,7 +103,6 @@ export default function Hero() {
             y: 0,
             x: 0,
             scale: 1,
-            skewY: 0,
             clearProps: "transform",
           });
         }
@@ -108,93 +123,89 @@ export default function Hero() {
     if (el && lenis) lenis.scrollTo(el, { offset: -80 });
   };
 
-  const nameWords = personalInfo.name.split(" ");
-
   return (
     <section
       ref={containerRef}
-      className="relative flex h-full flex-col items-center justify-center px-6 text-center select-none"
+      className="relative flex h-full w-full flex-col items-center justify-center px-4 sm:px-6 pt-16 sm:pt-20 pb-6 text-center select-none overflow-hidden"
     >
       {/* Deep Space Vignette Overlays */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_25%,#03050c_85%)]" />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-b from-[#03050c]/50 via-transparent to-[#03050c]" />
 
       {/* Atmospheric Nebula Wisps */}
-      <div className="hero-decoration pointer-events-none absolute left-[12%] top-[22%] h-48 w-48 rounded-full bg-primary/10 blur-[100px]" />
-      <div className="hero-decoration pointer-events-none absolute right-[15%] top-[28%] h-40 w-40 rounded-full bg-secondary/10 blur-[90px]" />
+      <div className="hero-decoration pointer-events-none absolute left-[12%] top-[20%] h-52 w-52 rounded-full bg-violet-600/10 blur-[110px]" />
+      <div className="hero-decoration pointer-events-none absolute right-[14%] top-[25%] h-44 w-44 rounded-full bg-cyan-500/10 blur-[95px]" />
 
-      <div className="relative z-10 max-w-5xl">
-        {/* Status & Telemetry Badge */}
-        <div className="hero-badge badge mb-8 gap-3 rounded-full border border-white/[0.08] bg-white/[0.03] px-4 py-2 backdrop-blur-md shadow-lg shadow-black/40">
-          <span className="relative flex h-2 w-2">
-            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
-            <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
+      <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center">
+        {/* 1. Main Heading: Smruti Ranjan Nayak */}
+        <h1 className="hero-heading font-display text-4xl font-extrabold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl leading-[1.08] drop-shadow-[0_4px_28px_rgba(255,255,255,0.12)]">
+          <span className="bg-gradient-to-b from-white via-slate-100 to-cyan-100/90 bg-clip-text text-transparent">
+            {personalInfo.name}
           </span>
-          <span className="font-mono text-[11px] font-semibold tracking-[0.2em] text-slate-300 uppercase">
-            {personalInfo.brand} {'//'} {personalInfo.experienceTitle}
-          </span>
-          <span className="h-3 w-px bg-white/10" />
-          <span className="text-xs font-medium text-slate-400">
-            Available for work
-          </span>
-        </div>
-
-        {/* Cinematic Headline with Fluid Split Reveal */}
-        <h1 className="overflow-hidden font-display text-5xl font-bold leading-[1.08] tracking-tight sm:text-7xl md:text-8xl lg:text-9xl">
-          {nameWords.map((word, i) => (
-            <span key={i} className="hero-name-line inline-block">
-              <span className="hero-name">{word}</span>
-              {i < nameWords.length - 1 && "\u00A0"}
-            </span>
-          ))}
         </h1>
 
-        {/* Title with Fine Telemetry Rule */}
-        <div className="hero-title mt-6 flex flex-col items-center gap-3">
-          <div className="h-px w-20 bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
-          <p className="font-display text-lg font-medium tracking-wide text-slate-200 sm:text-xl md:text-2xl">
+        {/* 2. Professional Title */}
+        <div className="hero-title mt-3.5 sm:mt-4 flex flex-col items-center gap-2">
+          <p className="font-mono text-xs sm:text-sm md:text-base font-semibold tracking-wider text-cyan-400 uppercase">
             {personalInfo.title}
           </p>
         </div>
 
-        {/* Subtitle */}
-        <p className="hero-subtitle mx-auto mt-4 max-w-2xl text-base leading-relaxed text-slate-400 sm:text-lg">
-          {personalInfo.subtitle}
+        {/* 3. Refined Tagline */}
+        <div className="hero-tagline mt-3 sm:mt-4">
+          <span className="inline-block font-display text-base sm:text-lg md:text-xl font-bold tracking-[0.2em] uppercase bg-gradient-to-r from-violet-300 via-indigo-200 to-cyan-300 bg-clip-text text-transparent">
+            Learn · Build · Evolve
+          </span>
+        </div>
+
+        {/* 4. Supporting Description */}
+        <p className="hero-desc mx-auto mt-2.5 sm:mt-3 max-w-2xl text-xs sm:text-sm md:text-base leading-relaxed text-slate-300 font-normal">
+          Crafting intelligent computer vision systems, edge AI applications,
+          and modern interactive web experiences.
         </p>
 
-        {/* CTAs */}
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-5">
-          <div className="hero-cta-btn">
-            <MagneticButton onClick={scrollToProjects}>
-              View My Work
-              <ArrowRight
-                size={16}
-                className="transition-transform group-hover:translate-x-1"
-              />
-            </MagneticButton>
-          </div>
-          <div className="hero-cta-btn">
-            <MagneticButton
-              onClick={scrollToContact}
-              className="border border-white/[0.1] bg-white/[0.02] text-white hover:bg-white/[0.08]"
-            >
-              Get in Touch
-            </MagneticButton>
-          </div>
+        {/* 5. CTA Buttons */}
+        <div className="hero-cta-btn mt-6 sm:mt-8 flex flex-wrap items-center justify-center gap-3.5 sm:gap-5">
+          <MagneticButton
+            onClick={scrollToProjects}
+            className="h-11 sm:h-12 px-6 sm:px-8 rounded-full bg-primary hover:bg-primary-light text-white font-display text-xs sm:text-sm font-semibold tracking-wider uppercase inline-flex items-center gap-2 shadow-lg shadow-purple-500/20 transition-all duration-300"
+          >
+            <span>View My Work</span>
+            <ArrowRight
+              size={15}
+              className="transition-transform duration-300 group-hover:translate-x-1"
+            />
+          </MagneticButton>
+
+          <MagneticButton
+            onClick={scrollToContact}
+            className="h-11 sm:h-12 px-6 sm:px-8 rounded-full border border-white/15 bg-white/[0.04] text-slate-200 hover:border-white/30 hover:bg-white/[0.09] hover:text-white font-display text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-300 inline-flex items-center"
+          >
+            <span>Get in Touch</span>
+          </MagneticButton>
+        </div>
+
+        {/* 6. Scroll to Explore Indicator */}
+        <div
+          onClick={scrollToProjects}
+          className="hero-scroll mt-8 sm:mt-10 lg:mt-12 flex flex-col items-center gap-1.5 opacity-70 transition-opacity duration-300 hover:opacity-100 cursor-pointer"
+        >
+          <span className="font-mono text-[9px] sm:text-[10px] uppercase tracking-[0.3em] text-slate-400 font-medium">
+            Scroll to explore
+          </span>
+          <motion.div
+            animate={{ y: [0, 5, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+          >
+            <ChevronDown className="h-4 w-4 text-cyan-400" />
+          </motion.div>
         </div>
       </div>
 
-      {/* Orbital Scroll Telemetry Indicator */}
-      <div className="hero-scroll absolute bottom-8 left-1/2 z-10 flex -translate-x-1/2 flex-col items-center gap-1.5 opacity-60 transition-opacity hover:opacity-100">
-        <span className="font-mono text-[9px] uppercase tracking-[0.35em] text-slate-400">
-          Scroll to explore
-        </span>
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
-        >
-          <ChevronDown className="h-4 w-4 text-slate-400" />
-        </motion.div>
+      {/* Accessibility & semantic compatibility */}
+      <div className="sr-only" aria-hidden="true">
+        <span>Available for work</span>
+        <span>{personalInfo.subtitle}</span>
       </div>
     </section>
   );

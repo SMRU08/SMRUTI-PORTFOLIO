@@ -45,7 +45,8 @@ export default function Contact() {
         {/* Asymmetrical Two-Column Futuristic Layout */}
         <div className="grid items-start gap-10 lg:grid-cols-12 lg:gap-12">
           {/* Left Column: Direct Inquiries & Telemetry Info Cards (5 Cols) */}
-          <div className="space-y-8 lg:col-span-5">
+          <div className="space-y-6 lg:col-span-5">
+            {/* 1. Contact Introduction & 2. Available for Work Status */}
             <div>
               {/* Telemetry Tag */}
               <ScrollReveal>
@@ -76,7 +77,7 @@ export default function Contact() {
 
               {/* Status Badge */}
               <ScrollReveal delay={0.12}>
-                <div className="mt-5 flex items-center gap-3">
+                <div className="mt-4 flex items-center gap-3">
                   <span className="relative flex h-2 w-2">
                     <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
@@ -88,14 +89,14 @@ export default function Contact() {
               </ScrollReveal>
             </div>
 
-            {/* Info Cards */}
-            <div className="space-y-4">
-              {/* Direct Email Card */}
+            {/* Info Cards with consistent spacing */}
+            <div className="space-y-3.5">
+              {/* 3. Primary Direct Channel — email card */}
               <ScrollReveal delay={0.15}>
-                <div className="group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5 backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/35 hover:bg-white/[0.04] hover:shadow-[0_0_25px_rgba(56,189,248,0.12)]">
-                  <div className="flex items-center gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-cyan-400/25 bg-cyan-400/10 text-cyan-400 transition-colors group-hover:border-cyan-400/50 group-hover:bg-cyan-400/20">
-                      <Mail size={18} />
+                <div className="group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.02] p-4 sm:p-4.5 backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/35 hover:bg-white/[0.04] hover:shadow-[0_0_25px_rgba(56,189,248,0.12)]">
+                  <div className="flex items-center gap-3.5">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-cyan-400/25 bg-cyan-400/10 text-cyan-400 transition-colors group-hover:border-cyan-400/50 group-hover:bg-cyan-400/20">
+                      <Mail size={17} />
                     </div>
                     <div className="min-w-0 flex-1">
                       <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
@@ -103,7 +104,7 @@ export default function Contact() {
                       </span>
                       <a
                         href={`mailto:${personalInfo.email}`}
-                        className="mt-1 block truncate font-mono text-sm font-semibold text-white transition-colors hover:text-cyan-300"
+                        className="mt-0.5 block truncate font-mono text-sm font-semibold text-white transition-colors hover:text-cyan-300"
                       >
                         {personalInfo.email}
                       </a>
@@ -112,21 +113,21 @@ export default function Contact() {
                 </div>
               </ScrollReveal>
 
-              {/* Location Card */}
+              {/* 4. Operational Base — location card */}
               <ScrollReveal delay={0.18}>
-                <div className="group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5 backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/35 hover:bg-white/[0.04] hover:shadow-[0_0_25px_rgba(56,189,248,0.12)]">
-                  <div className="flex items-center gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-sky-400/25 bg-sky-400/10 text-sky-400 transition-colors group-hover:border-sky-400/50 group-hover:bg-sky-400/20">
-                      <MapPin size={18} />
+                <div className="group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-white/[0.02] p-4 sm:p-4.5 backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/35 hover:bg-white/[0.04] hover:shadow-[0_0_25px_rgba(56,189,248,0.12)]">
+                  <div className="flex items-center gap-3.5">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-sky-400/25 bg-sky-400/10 text-sky-400 transition-colors group-hover:border-sky-400/50 group-hover:bg-sky-400/20">
+                      <MapPin size={17} />
                     </div>
                     <div>
                       <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
                         Operational Base
                       </span>
-                      <p className="mt-1 text-sm font-semibold text-white">
+                      <p className="mt-0.5 text-sm font-semibold text-white">
                         {personalInfo.location}
                       </p>
-                      <span className="mt-0.5 block font-mono text-[11px] text-slate-400">
+                      <span className="mt-0.5 block font-mono text-[10px] text-slate-400">
                         LAT 20.668° N // LON 85.597° E
                       </span>
                     </div>
@@ -134,40 +135,40 @@ export default function Contact() {
                 </div>
               </ScrollReveal>
 
-              {/* Curriculum Vitae Download */}
+              {/* 5. Documented Dossier — CV/PDF card */}
               <ScrollReveal delay={0.21}>
                 <a
                   href={personalInfo.cvUrl || "/Smruti_Ranjan_Nayak_CV.pdf"}
                   download
-                  className="group flex items-center justify-between rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5 backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/35 hover:bg-white/[0.04] hover:shadow-[0_0_25px_rgba(56,189,248,0.12)]"
+                  className="group flex items-center justify-between rounded-2xl border border-white/[0.08] bg-white/[0.02] p-4 sm:p-4.5 backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/35 hover:bg-white/[0.04] hover:shadow-[0_0_25px_rgba(56,189,248,0.12)]"
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-cyan-400/25 bg-cyan-400/10 text-cyan-400 transition-colors group-hover:border-cyan-400/50 group-hover:bg-cyan-400/20">
-                      <FileText size={18} />
+                  <div className="flex items-center gap-3.5">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-cyan-400/25 bg-cyan-400/10 text-cyan-400 transition-colors group-hover:border-cyan-400/50 group-hover:bg-cyan-400/20">
+                      <FileText size={17} />
                     </div>
                     <div>
                       <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
                         Documented Dossier
                       </span>
-                      <span className="mt-1 block text-sm font-semibold text-white transition-colors group-hover:text-cyan-300">
+                      <span className="mt-0.5 block text-sm font-semibold text-white transition-colors group-hover:text-cyan-300">
                         Curriculum Vitae (PDF)
                       </span>
                     </div>
                   </div>
                   <Download
-                    size={16}
+                    size={15}
                     className="text-slate-400 transition-all duration-200 group-hover:translate-y-0.5 group-hover:text-cyan-300"
                   />
                 </a>
               </ScrollReveal>
 
-              {/* Verified Networks */}
+              {/* 6. Connected Networks card */}
               <ScrollReveal delay={0.24}>
-                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-5 backdrop-blur-xl">
+                <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-4 sm:p-4.5 backdrop-blur-xl">
                   <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
                     Connected Networks
                   </span>
-                  <div className="mt-3 flex flex-wrap items-center gap-3">
+                  <div className="mt-2.5 flex flex-wrap items-center gap-2.5">
                     {personalInfo.socials.map((social) => {
                       const Icon = iconMap[social.icon] || Mail;
                       return (
@@ -180,11 +181,11 @@ export default function Contact() {
                               : "_blank"
                           }
                           rel="noopener noreferrer"
-                          className="group flex h-10 w-10 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03] transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:shadow-[0_0_15px_rgba(56,189,248,0.2)]"
+                          className="group flex h-9 w-9 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.03] transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:shadow-[0_0_15px_rgba(56,189,248,0.2)]"
                           aria-label={social.name}
                         >
                           <Icon
-                            size={16}
+                            size={15}
                             className="text-slate-300 transition-colors group-hover:text-cyan-300"
                           />
                         </a>
