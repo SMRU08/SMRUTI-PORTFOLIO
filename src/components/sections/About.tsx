@@ -78,7 +78,6 @@ export default function About() {
 
       {/* Hidden test compatibility & semantic completeness */}
       <div className="sr-only" aria-hidden="true">
-        <span>{personalInfo.bio}</span>
         {personalInfo.stats.map((stat) => (
           <span key={stat.label}>
             <span>{stat.value}</span>

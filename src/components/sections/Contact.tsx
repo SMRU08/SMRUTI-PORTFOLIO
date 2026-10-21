@@ -14,6 +14,7 @@ import {
 import { personalInfo } from "@/lib/constants";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import SectionDivider from "@/components/ui/SectionDivider";
+import LocalTimeBadge from "@/components/ui/LocalTimeBadge";
 import ContactForm from "./ContactForm";
 
 const iconMap: Record<
@@ -120,15 +121,18 @@ export default function Contact() {
                     <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-sky-400/25 bg-sky-400/10 text-sky-400 transition-colors group-hover:border-sky-400/50 group-hover:bg-sky-400/20">
                       <MapPin size={17} />
                     </div>
-                    <div>
-                      <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
-                        Location
-                      </span>
+                    <div className="min-w-0 flex-1">
+                      <div className="flex flex-wrap items-center justify-between gap-2">
+                        <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
+                          Location
+                        </span>
+                        <LocalTimeBadge />
+                      </div>
                       <p className="mt-0.5 text-sm font-semibold text-white">
                         {personalInfo.location}
                       </p>
                       <span className="mt-0.5 block font-mono text-[10px] text-slate-400">
-                        Odisha, India
+                        Odisha, India &bull; Available for remote &amp; on-site
                       </span>
                     </div>
                   </div>
