@@ -58,6 +58,10 @@ npm run test:coverage # vitest coverage report
 - **Instagram:** [@sahill_._08](https://www.instagram.com/sahill_._08/)
 - **Portfolio:** [smrutiranjan-portfolio.vercel.app](https://smrutiranjan-portfolio.vercel.app/)
 
+## License
+
+Distributed under the MIT License. See [`LICENSE`](./LICENSE) for full legal text and permissions.
+
 ## Acknowledgments & Open-Source Attribution
 
 - Built on modern open-source web technologies: Next.js 16, React 19, React Three Fiber, Three.js, GSAP, Lenis, and Tailwind CSS.
