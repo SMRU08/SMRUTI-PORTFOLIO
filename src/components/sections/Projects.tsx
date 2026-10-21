@@ -14,7 +14,7 @@ export function ProjectsHeader() {
         <ScrollReveal>
           <div className="flex items-center gap-4">
             <span className="font-mono text-xs font-semibold tracking-[0.25em] text-primary-light uppercase">
-              {"02 // CELESTIAL EXHIBITION"}
+              {"02 // FEATURED PROJECTS"}
             </span>
             <div className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent" />
           </div>
@@ -25,7 +25,7 @@ export function ProjectsHeader() {
             Featured Projects
           </GradientText>
           <p className="mt-4 max-w-lg text-base text-slate-300">
-            Four planetary destinations representing flagship systems across industrial AI, offline edge translation, and computer vision.
+            A showcase of practical AI, computer vision, and full-stack web applications I&apos;ve built.
           </p>
         </ScrollReveal>
       </div>

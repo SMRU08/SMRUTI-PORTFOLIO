@@ -46,7 +46,7 @@ export default function Skills() {
         <ScrollReveal>
           <div className="flex items-center gap-4">
             <span className="font-mono text-xs font-semibold tracking-[0.25em] text-primary-light uppercase">
-              04 // CAPABILITIES & STACK
+              04 // SKILLS & TOOLS
             </span>
             <div className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent" />
           </div>
@@ -57,7 +57,7 @@ export default function Skills() {
             Skills & Technologies
           </GradientText>
           <p className="mt-4 max-w-2xl text-base text-slate-300">
-            Engineered proficiency across deep learning architectures, computer vision pipelines, full-stack reactive interfaces, and core computer science fundamentals.
+            Technologies, frameworks, and programming languages I use to build AI applications and full-stack software.
           </p>
         </ScrollReveal>
 

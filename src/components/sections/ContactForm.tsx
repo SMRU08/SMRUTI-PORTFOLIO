@@ -108,11 +108,11 @@ export default function ContactForm() {
         <div className="flex items-center gap-2">
           <div className="h-1.5 w-1.5 rounded-full bg-cyan-400 animate-pulse" />
           <span className="font-mono text-[11px] font-semibold tracking-[0.2em] uppercase text-slate-400">
-            TRANSMISSION PORTAL
+            SEND A MESSAGE
           </span>
         </div>
         <span className="font-mono text-[10px] text-slate-500">
-          TLS ENCRYPTED
+          DIRECT INBOX
         </span>
       </div>
 

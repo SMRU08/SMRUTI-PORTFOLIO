@@ -41,12 +41,7 @@ export default function About() {
 
           {/* Short Professional Biography */}
           <p className="text-sm sm:text-base leading-relaxed text-slate-300 font-normal">
-            I&apos;m Smruti Ranjan Nayak, a Computer Science Engineering student
-            at Synergy Institute of Engineering &amp; Technology, Dhenkanal
-            (2024–2028). I&apos;m passionate about software development,
-            artificial intelligence, and building practical applications. I
-            enjoy exploring new technologies, solving problems, and continuously
-            improving my engineering skills.
+            {personalInfo.bio}
           </p>
 
           {/* Compact Education and Location Labels */}

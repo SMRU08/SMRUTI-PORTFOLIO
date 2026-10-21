@@ -53,7 +53,7 @@ export default function Contact() {
                 <div className="inline-flex items-center gap-2.5 rounded-full border border-cyan-400/20 bg-cyan-400/[0.04] px-3.5 py-1.5 backdrop-blur-md">
                   <Radio size={13} className="text-cyan-400 animate-pulse" />
                   <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.22em] text-cyan-300">
-                    {"05 // SECURE TRANSMISSION"}
+                    {"05 // GET IN TOUCH"}
                   </span>
                 </div>
               </ScrollReveal>
@@ -71,7 +71,7 @@ export default function Contact() {
               {/* Short Introduction */}
               <ScrollReveal delay={0.1}>
                 <p className="mt-4 text-sm sm:text-base leading-relaxed text-slate-300">
-                  Have a software engineering opportunity, an AI/ML initiative, or an ambitious technical problem to solve? Send a message through the transmission portal or reach out directly.
+                  Have an exciting project, an internship opportunity, or a question? Feel free to send a message or reach out directly.
                 </p>
               </ScrollReveal>
 
@@ -83,7 +83,7 @@ export default function Contact() {
                     <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400" />
                   </span>
                   <span className="font-mono text-xs font-medium uppercase tracking-wider text-slate-400">
-                    Available for work &bull; Dhenkanal (GMT+5:30)
+                    Available for work &bull; Dhenkanal, India
                   </span>
                 </div>
               </ScrollReveal>
@@ -100,7 +100,7 @@ export default function Contact() {
                     </div>
                     <div className="min-w-0 flex-1">
                       <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
-                        Primary Direct Channel
+                        Direct Email
                       </span>
                       <a
                         href={`mailto:${personalInfo.email}`}
@@ -122,13 +122,13 @@ export default function Contact() {
                     </div>
                     <div>
                       <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
-                        Operational Base
+                        Location
                       </span>
                       <p className="mt-0.5 text-sm font-semibold text-white">
                         {personalInfo.location}
                       </p>
                       <span className="mt-0.5 block font-mono text-[10px] text-slate-400">
-                        LAT 20.668° N // LON 85.597° E
+                        Odisha, India
                       </span>
                     </div>
                   </div>
@@ -148,7 +148,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
-                        Documented Dossier
+                        Resume
                       </span>
                       <span className="mt-0.5 block text-sm font-semibold text-white transition-colors group-hover:text-cyan-300">
                         Curriculum Vitae (PDF)
@@ -166,7 +166,7 @@ export default function Contact() {
               <ScrollReveal delay={0.24}>
                 <div className="rounded-2xl border border-white/[0.08] bg-white/[0.02] p-4 sm:p-4.5 backdrop-blur-xl">
                   <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400">
-                    Connected Networks
+                    Social Profiles
                   </span>
                   <div className="mt-2.5 flex flex-wrap items-center gap-2.5">
                     {personalInfo.socials.map((social) => {

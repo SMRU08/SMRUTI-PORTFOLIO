@@ -26,7 +26,7 @@ export default function OtherProjects() {
         <ScrollReveal>
           <div className="flex items-center gap-4">
             <span className="font-mono text-xs font-semibold tracking-[0.25em] text-primary-light uppercase">
-              03 // REPERTORY & CREDENTIALS
+              03 // MORE WORK & EXPERIENCE
             </span>
             <div className="h-px flex-1 bg-gradient-to-r from-primary/30 to-transparent" />
           </div>
@@ -37,7 +37,7 @@ export default function OtherProjects() {
             More Projects & Experience
           </GradientText>
           <p className="mt-4 max-w-2xl text-base text-slate-300">
-            A comprehensive record of hackathon developments, client architectures, academic achievements, and industry certifications.
+            A collection of hackathon projects, internships, education, and verified certifications.
           </p>
         </ScrollReveal>
 

@@ -15,7 +15,7 @@ export const personalInfo: PersonalInfo = {
   title: "AI/ML Enthusiast & Full-Stack Developer",
   subtitle:
     "Learn · Build · Evolve — Crafting intelligent computer vision systems, edge AI applications, and modern interactive web experiences.",
-  bio: "Computer Science & Engineering undergraduate at Synergy Institute of Engineering & Technology, Dhenkanal (2024–2028). Passionate about Artificial Intelligence, Machine Learning, Computer Vision, and full-stack engineering. Built SafeSync (BPUT Hackathon 2026) and JANBHASHA (Smart India Hackathon SIH 2026). Completed an AI & ML internship at Central Tool Room & Training Centre (CTTC), Bhubaneswar. Focused on mastering DSA, deep learning frameworks, modern React, and robust backend systems.",
+  bio: "I'm Smruti Ranjan Nayak, a Computer Science student at Synergy Institute of Engineering & Technology, Dhenkanal (2024–2028). I enjoy building practical software, working with artificial intelligence, and developing clean web applications. I am focused on writing readable code, learning continuously, and creating useful digital products.",
   email: "smrutiranjan2412@gmail.com",
   location: "Dhenkanal, Odisha, India",
   cvUrl: "/Smruti_Ranjan_Nayak_CV.pdf",
@@ -59,7 +59,7 @@ export const projects: Project[] = [
     id: "safesync",
     title: "SafeSync",
     description:
-      "An autonomous AI vision-based industrial safety monitoring platform engineered for BPUT Hackathon 2026. Delivers real-time computer vision for workplace safety, PPE compliance governance, combustion hazard detection, and explainable risk assessment backed by 300+ passing tests.",
+      "An AI-powered workplace safety system built for the BPUT Hackathon. It uses computer vision to monitor protective gear (PPE), detect fire and safety hazards, and alert workers in real time.",
     technologies: [
       "Python",
       "FastAPI",
@@ -78,7 +78,7 @@ export const projects: Project[] = [
     id: "janbhasha",
     title: "JANBHASHA (जनभाषा)",
     description:
-      "An AI-powered offline vernacular pedagogy and real-time translation platform built for Smart India Hackathon (SIH 2026). Operates 100% air-gapped on low-cost Android tablets for primary tribal students in Odisha, Jharkhand & West Bengal, supporting Santali (Ol Chiki), Ho, and Mundari via on-device ONNX Runtime inference.",
+      "An offline learning and translation app built for the Smart India Hackathon (SIH 2026). It works without internet on low-cost tablets to help primary school students learn in their local regional languages.",
     technologies: [
       "React Native",
       "TypeScript",
@@ -95,7 +95,7 @@ export const projects: Project[] = [
     id: "face-recognition-attendance",
     title: "Face Recognition Attendance System",
     description:
-      "An automated attendance tracking platform utilizing computer vision and deep learning. Identifies faces in real time from camera feeds and matches them against database encodings for seamless, proxy-free attendance management.",
+      "A smart camera-based attendance app that detects and recognizes faces in real time, making daily attendance fast, automatic, and proxy-free.",
     technologies: [
       "Python",
       "OpenCV",
@@ -111,7 +111,7 @@ export const projects: Project[] = [
     id: "real-time-emotion-detection",
     title: "Real-Time Emotion Detection",
     description:
-      "A real-time facial expression classifier leveraging convolutional neural networks. Detects human faces from live video streams and classifies emotional expressions into distinct psychological categories with low latency.",
+      "A computer vision application that analyzes live camera video to detect human faces and recognize facial expressions and emotions in real time.",
     technologies: [
       "Python",
       "OpenCV",
@@ -132,7 +132,7 @@ export const otherProjects: Project[] = [
     id: "safesync-archive",
     title: "SafeSync — Industrial Safety AI",
     description:
-      "BPUT Hackathon 2026 project: Real-time computer vision monitoring for PPE compliance, combustion hazard detection, and automated workplace incident prevention with FastAPI and React 18 frontend.",
+      "BPUT Hackathon project: Real-time camera monitoring for workplace safety, protective gear compliance, and automated hazard alerts with a clean web dashboard.",
     technologies: [
       "Python",
       "FastAPI",
@@ -149,7 +149,7 @@ export const otherProjects: Project[] = [
     id: "janbhasha-archive",
     title: "JANBHASHA — SIH 2026 Vernacular AI",
     description:
-      "Smart India Hackathon (SIH26042): 100% offline edge AI translation and mother-tongue pedagogy platform for tribal primary education (Santali, Ho, Mundari) using ONNX Runtime Mobile.",
+      "Smart India Hackathon project: 100% offline edge AI app helping students learn school lessons in their mother tongue on Android tablets.",
     technologies: [
       "React Native",
       "TypeScript",
@@ -165,7 +165,7 @@ export const otherProjects: Project[] = [
     id: "portfolio-live-v1",
     title: "Personal Portfolio Website (Vite)",
     description:
-      "Live personal portfolio showcasing modern web projects, responsive design, interactive animations, and smooth kinetic scrolling via Lenis.",
+      "Personal portfolio website showcasing my software projects, interactive animations, and responsive design.",
     technologies: [
       "React",
       "Vite",
@@ -183,7 +183,7 @@ export const otherProjects: Project[] = [
     id: "cttc-internship-project",
     title: "AI & ML Internship — CTTC Bhubaneswar",
     description:
-      "Intensive Artificial Intelligence & Machine Learning internship (16 June 2026 – 15 July 2026) at Central Tool Room & Training Centre (CTTC), Bhubaneswar. Covered Python, Machine Learning, NLP, Computer Vision, and Deep Learning using Keras, culminating in the Face Recognition Attendance System.",
+      "AI & ML internship at Central Tool Room & Training Centre (CTTC), Bhubaneswar, focused on Python, Machine Learning, Computer Vision, and real-time face recognition.",
     technologies: [
       "Python",
       "Machine Learning",
@@ -199,7 +199,7 @@ export const otherProjects: Project[] = [
     id: "interactive-calculator",
     title: "Basic Web Calculator",
     description:
-      "Clean, user-friendly arithmetic calculator built with pure HTML, CSS, and vanilla JavaScript handling standard arithmetic calculations with responsive styling.",
+      "A clean, responsive web calculator built with HTML, CSS, and JavaScript for standard arithmetic operations.",
     technologies: ["HTML", "CSS", "JavaScript"],
     image: "",
     githubUrl: "https://github.com/SMRU08",
