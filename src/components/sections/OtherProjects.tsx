@@ -17,6 +17,7 @@ import {
 import GlassCard from "@/components/ui/GlassCard";
 import GradientText from "@/components/ui/GradientText";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import ReticleCorners from "@/components/ui/ReticleCorners";
 
 export default function OtherProjects() {
   return (
@@ -45,7 +46,8 @@ export default function OtherProjects() {
         <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {otherProjects.map((project, i) => (
             <ScrollReveal key={project.id} delay={i * 0.05}>
-              <GlassCard className="flex h-full flex-col justify-between p-6">
+              <GlassCard className="group relative flex h-full flex-col justify-between p-6">
+                <ReticleCorners />
                 <div>
                   <div className="flex items-center justify-between text-xs text-slate-400">
                     <span className="font-mono tracking-wider uppercase">

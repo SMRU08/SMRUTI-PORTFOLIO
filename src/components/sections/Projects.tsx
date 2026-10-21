@@ -4,8 +4,15 @@ import { ExternalLink, Github, Compass } from "lucide-react";
 import { projects } from "@/lib/constants";
 import GradientText from "@/components/ui/GradientText";
 import ScrollReveal from "@/components/ui/ScrollReveal";
+import ReticleCorners from "@/components/ui/ReticleCorners";
 
 const PLANET_NAMES = ["Earth", "Mars", "Jupiter", "Saturn"];
+const PROJECT_TELEMETRY = [
+  "⚡ 28ms · PPE Detection Engine",
+  "⚡ Edge AI · Offline Translation",
+  "⚡ 30 FPS · 68-Pt Landmark Tracker",
+  "⚡ 22ms · Emotion Vectorizer",
+];
 
 export function ProjectsHeader() {
   return (
@@ -39,19 +46,25 @@ export function ProjectDetail({ index }: { index: number }) {
 
   return (
     <div className="flex h-full items-center justify-end px-6 sm:px-12 lg:pr-20 lg:pl-[44%]">
-      <div className="glass-card w-full max-w-xl rounded-3xl p-8 sm:p-10 text-left">
+      <div className="glass-card group relative w-full max-w-xl rounded-3xl p-8 sm:p-10 text-left overflow-hidden">
+        <ReticleCorners />
+
         {/* Celestial Sector Tag */}
         <ScrollReveal>
-          <div className="flex items-center justify-between border-b border-white/[0.08] pb-4">
+          <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/[0.08] pb-4">
             <div className="flex items-center gap-2">
               <Compass size={14} className="text-primary-light" />
               <span className="font-mono text-xs font-semibold tracking-[0.2em] text-slate-300 uppercase">
                 {PLANET_NAMES[index]} {'//'} SECTOR {String(index + 1).padStart(2, "0")}
               </span>
             </div>
-            <span className="font-mono text-[11px] text-slate-400">
-              ORBITAL STAGE
-            </span>
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-cyan-400/20 bg-cyan-400/[0.05] px-2.5 py-0.5 font-mono text-[10px] text-cyan-300">
+              <span className="relative flex h-1.5 w-1.5">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-75" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-cyan-400" />
+              </span>
+              <span>{PROJECT_TELEMETRY[index] || "ORBITAL STAGE"}</span>
+            </div>
           </div>
         </ScrollReveal>
 
