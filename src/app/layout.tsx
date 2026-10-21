@@ -4,7 +4,7 @@ import { personalInfo } from "@/lib/constants";
 import Providers from "./providers";
 import "./globals.css";
 
-const SITE_URL = "https://smrutiranjan-portfolio.vercel.app";
+const SITE_URL = "https://smrutiportfolio.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

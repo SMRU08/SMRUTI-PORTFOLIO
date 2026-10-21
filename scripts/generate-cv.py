@@ -4,7 +4,7 @@ def create_pdf(filename):
     lines = [
         ("SMRUTI RANJAN NAYAK", 16, True),
         ("AI/ML Practitioner & Full-Stack Developer | DEV SHOWCASE", 11, False),
-        ("Email: smrutiranjan2412@gmail.com | Portfolio: https://smrutiranjan-portfolio.vercel.app/", 9, False),
+        ("Email: smrutiranjan2412@gmail.com | Portfolio: https://smrutiportfolio.vercel.app/", 9, False),
         ("GitHub: https://github.com/SMRU08 | LinkedIn: https://www.linkedin.com/in/smruti-ranjan-nayak-67a733360", 9, False),
         ("----------------------------------------------------------------------------------------------------", 9, False),
         ("EDUCATION", 12, True),
@@ -32,7 +32,7 @@ def create_pdf(filename):
         ("   Facial landmark analysis and real-time expression recognition using deep learning.", 9, False),
         (" * Personal Portfolio Website", 10, True),
         ("   Technologies: React, Vite, JavaScript, Tailwind CSS, Framer Motion, GSAP, Lenis.", 9, False),
-        ("   Demo: https://smrutiranjan-portfolio.vercel.app/ | Repo: https://github.com/SMRU08", 9, False),
+        ("   Demo: https://smrutiportfolio.vercel.app/ | Repo: https://github.com/SMRU08", 9, False),
         ("----------------------------------------------------------------------------------------------------", 9, False),
         ("INTERNSHIP EXPERIENCE", 12, True),
         (" * Artificial Intelligence & Machine Learning Intern (16 June 2026 - 15 July 2026)", 10, True),

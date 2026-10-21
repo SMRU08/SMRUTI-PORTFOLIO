@@ -4,7 +4,7 @@
 ### AI/ML Enthusiast & Full-Stack Developer
 **Crafting Intelligent Computer Vision Systems, Edge AI, and Modern Interactive 3D Web Experiences.**
 
-[![Live Demo](https://img.shields.io/badge/Live_Site-smrutiranjan--portfolio.vercel.app-06B6D4?style=for-the-badge&logo=vercel&logoColor=white)](https://smrutiranjan-portfolio.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Site-smrutiportfolio.vercel.app-06B6D4?style=for-the-badge&logo=vercel&logoColor=white)](https://smrutiportfolio.vercel.app/)
 [![Next.js](https://img.shields.io/badge/Next.js_16-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)](https://nextjs.org/)
 [![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -125,7 +125,7 @@ A modern, high-performance developer portfolio built with **Next.js 16 App Route
 - 📧 **Direct Email**: [smrutiranjan2412@gmail.com](mailto:smrutiranjan2412@gmail.com)
 - 🐙 **GitHub**: [@SMRU08](https://github.com/SMRU08)
 - 💼 **LinkedIn**: [Smruti Ranjan Nayak](https://www.linkedin.com/in/smruti-ranjan-nayak-67a733360)
-- 🌐 **Live Portfolio**: [smrutiranjan-portfolio.vercel.app](https://smrutiranjan-portfolio.vercel.app/)
+- 🌐 **Live Portfolio**: [smrutiportfolio.vercel.app](https://smrutiportfolio.vercel.app/)
 
 ---
 

@@ -37,7 +37,7 @@ export const personalInfo: PersonalInfo = {
     },
     {
       name: "Portfolio",
-      url: "https://smrutiranjan-portfolio.vercel.app/",
+      url: "https://smrutiportfolio.vercel.app/",
       icon: "portfolio",
     },
     {
@@ -176,7 +176,7 @@ export const otherProjects: Project[] = [
       "Lenis",
     ],
     image: "",
-    demoUrl: "https://smrutiranjan-portfolio.vercel.app/",
+    demoUrl: "https://smrutiportfolio.vercel.app/",
     githubUrl: "https://github.com/SMRU08",
   },
   {
