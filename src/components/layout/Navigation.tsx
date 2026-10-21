@@ -1,11 +1,115 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion, AnimatePresence, useScroll, useSpring } from "framer-motion";
+import {
+  motion,
+  AnimatePresence,
+  useScroll,
+  useSpring,
+  useMotionValue,
+} from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { navLinks, personalInfo } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { useLenis } from "lenis/react";
+
+function NavItem({
+  link,
+  isActive,
+  onClick,
+}: {
+  link: { label: string; href: string };
+  isActive: boolean;
+  onClick: () => void;
+}) {
+  const [isHovered, setIsHovered] = useState(false);
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  // Viscous fluid physics for smooth liquid cursor tracking
+  const liquidX = useSpring(mouseX, { stiffness: 280, damping: 24 });
+  const liquidY = useSpring(mouseY, { stiffness: 280, damping: 24 });
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    mouseX.set(e.clientX - rect.left);
+    mouseY.set(e.clientY - rect.top);
+  };
+
+  const handleMouseEnter = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    mouseX.set(e.clientX - rect.left);
+    mouseY.set(e.clientY - rect.top);
+    setIsHovered(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+  };
+
+  return (
+    <button
+      onClick={onClick}
+      onMouseMove={handleMouseMove}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      aria-label={`Navigate to ${link.label} section`}
+      aria-current={isActive ? "page" : undefined}
+      className={cn(
+        "group relative overflow-hidden rounded-full px-3.5 py-1.5 text-xs font-medium tracking-wide transition-colors duration-200",
+        isActive ? "text-white" : "text-slate-400 hover:text-white"
+      )}
+    >
+      {/* Existing Active Highlight Pill */}
+      {isActive && (
+        <motion.span
+          layoutId="nav-pill"
+          className="absolute inset-0 rounded-full border border-white/[0.12] bg-white/[0.08] shadow-sm"
+          transition={{
+            type: "spring",
+            stiffness: 400,
+            damping: 32,
+          }}
+        />
+      )}
+
+      {/* Fluid Liquid Cursor Hover Animation (strictly clipped to this item) */}
+      <AnimatePresence>
+        {isHovered && (
+          <motion.div
+            initial={{ opacity: 0, scale: 0.6 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.7 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="pointer-events-none absolute inset-0 z-0 overflow-hidden rounded-full"
+          >
+            {/* Primary Liquid Glow Blob */}
+            <motion.span
+              style={{
+                left: liquidX,
+                top: liquidY,
+              }}
+              className="absolute h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(6,182,212,0.36)_0%,rgba(139,92,246,0.26)_45%,rgba(59,130,246,0.14)_70%,transparent_100%)] blur-[4px]"
+            />
+            {/* Viscous Liquid Core Highlight */}
+            <motion.span
+              style={{
+                left: liquidX,
+                top: liquidY,
+              }}
+              className="absolute h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(34,211,238,0.42)_0%,rgba(168,85,247,0.22)_60%,transparent_100%)] blur-[2px]"
+            />
+            {/* Subtle Liquid Perimeter Border Sheen */}
+            <div className="absolute inset-0 rounded-full border border-cyan-400/25 bg-gradient-to-r from-cyan-500/[0.08] via-violet-500/[0.08] to-blue-500/[0.08]" />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Crisp Foreground Label */}
+      <span className="relative z-10 select-none">{link.label}</span>
+    </button>
+  );
+}
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -70,7 +174,7 @@ export default function Navigation() {
       >
         {/* Desktop Navigation */}
         <div className="flex items-center gap-1">
-          {/* Brand Mark */}
+          {/* Brand Mark (untouched, no liquid effect) */}
           <div className="hidden items-center gap-2 pl-3 pr-2 md:flex">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-60" />
@@ -82,35 +186,17 @@ export default function Navigation() {
             <span className="mx-1 h-3 w-px bg-white/10" />
           </div>
 
+          {/* Desktop Nav Items with Liquid Cursor Hover Animation */}
           <ul className="hidden items-center gap-0.5 md:flex">
             {navLinks.map((link) => {
               const isActive = activeSection === link.href.replace("#", "");
               return (
                 <li key={link.href}>
-                  <button
+                  <NavItem
+                    link={link}
+                    isActive={isActive}
                     onClick={() => scrollTo(link.href)}
-                    aria-label={`Navigate to ${link.label} section`}
-                    aria-current={isActive ? "page" : undefined}
-                    className={cn(
-                      "relative rounded-full px-3.5 py-1.5 text-xs font-medium tracking-wide transition-colors duration-200",
-                      isActive
-                        ? "text-white"
-                        : "text-slate-400 hover:text-white"
-                    )}
-                  >
-                    {isActive && (
-                      <motion.span
-                        layoutId="nav-pill"
-                        className="absolute inset-0 rounded-full bg-white/[0.08] border border-white/[0.12] shadow-sm"
-                        transition={{
-                          type: "spring",
-                          stiffness: 400,
-                          damping: 32,
-                        }}
-                      />
-                    )}
-                    <span className="relative z-10">{link.label}</span>
-                  </button>
+                  />
                 </li>
               );
             })}
