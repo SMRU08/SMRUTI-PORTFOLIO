@@ -12,6 +12,7 @@ import { Menu, X } from "lucide-react";
 import { navLinks, personalInfo } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { useLenis } from "lenis/react";
+import SoundToggle from "@/components/ui/SoundToggle";
 
 function NavItem({
   link,
@@ -202,20 +203,29 @@ export default function Navigation() {
             })}
           </ul>
 
+          {/* Sound Toggle (Desktop) */}
+          <div className="hidden md:flex items-center pl-1.5">
+            <span className="h-3 w-px bg-white/10 mr-1.5" />
+            <SoundToggle />
+          </div>
+
           {/* Mobile Menu Toggle */}
           <div className="flex items-center justify-between gap-3 px-1 md:hidden">
             <span className="font-display text-xs font-bold tracking-widest text-white/90">
               {personalInfo.brand}
             </span>
-            <button
-              onClick={() => setMobileOpen(!mobileOpen)}
-              className="flex h-9 w-9 items-center justify-center rounded-full text-white/80 transition-colors hover:bg-white/10 hover:text-white"
-              aria-label="Toggle menu"
-              aria-expanded={mobileOpen}
-              aria-controls="mobile-nav-menu"
-            >
-              {mobileOpen ? <X size={18} /> : <Menu size={18} />}
-            </button>
+            <div className="flex items-center gap-1.5">
+              <SoundToggle compact />
+              <button
+                onClick={() => setMobileOpen(!mobileOpen)}
+                className="flex h-9 w-9 items-center justify-center rounded-full text-white/80 transition-colors hover:bg-white/10 hover:text-white"
+                aria-label="Toggle menu"
+                aria-expanded={mobileOpen}
+                aria-controls="mobile-nav-menu"
+              >
+                {mobileOpen ? <X size={18} /> : <Menu size={18} />}
+              </button>
+            </div>
           </div>
         </div>
 
