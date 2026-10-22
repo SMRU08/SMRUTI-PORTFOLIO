@@ -58,10 +58,10 @@ export function ProjectDetail({ index }: { index: number }) {
                 {PLANET_NAMES[index]} {'//'} SECTOR {String(index + 1).padStart(2, "0")}
               </span>
             </div>
-            <div className="inline-flex items-center gap-1.5 rounded-full border border-cyan-400/20 bg-cyan-400/[0.05] px-2.5 py-0.5 font-mono text-[10px] text-cyan-300">
+            <div className="inline-flex items-center gap-1.5 rounded-full border border-primary/25 bg-primary/[0.06] px-2.5 py-0.5 font-mono text-[10px] text-primary-light">
               <span className="relative flex h-1.5 w-1.5">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-75" />
-                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-cyan-400" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary opacity-75" />
+                <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-primary" />
               </span>
               <span>{PROJECT_TELEMETRY[index] || "ORBITAL STAGE"}</span>
             </div>

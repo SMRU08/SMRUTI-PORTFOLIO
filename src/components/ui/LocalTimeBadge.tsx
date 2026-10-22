@@ -46,7 +46,7 @@ export default function LocalTimeBadge({ className = "" }: { className?: string 
 
   return (
     <span
-      className={`inline-flex items-center gap-1.5 rounded-full border border-cyan-400/20 bg-cyan-400/[0.05] px-2.5 py-0.5 font-mono text-[10px] text-cyan-200 backdrop-blur-sm ${className}`}
+      className={`inline-flex items-center gap-1.5 rounded-full border border-primary/25 bg-primary/[0.06] px-2.5 py-0.5 font-mono text-[10px] text-violet-200 backdrop-blur-sm ${className}`}
       title={`Current local time in Dhenkanal, India (IST): ${time}`}
     >
       <span className="relative flex h-1.5 w-1.5">
@@ -56,7 +56,7 @@ export default function LocalTimeBadge({ className = "" }: { className?: string 
       {isDay ? (
         <Sun size={11} className="text-amber-400 shrink-0" />
       ) : (
-        <Moon size={11} className="text-cyan-300 shrink-0" />
+        <Moon size={11} className="text-primary-light shrink-0" />
       )}
       <span className="tracking-wide font-medium">{time} IST</span>
     </span>

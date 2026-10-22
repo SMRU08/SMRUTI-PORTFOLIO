@@ -90,7 +90,7 @@ function NavItem({
                 left: liquidX,
                 top: liquidY,
               }}
-              className="absolute h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(6,182,212,0.36)_0%,rgba(139,92,246,0.26)_45%,rgba(59,130,246,0.14)_70%,transparent_100%)] blur-[4px]"
+              className="absolute h-14 w-14 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(167,139,250,0.36)_0%,rgba(129,84,255,0.26)_45%,rgba(99,102,241,0.14)_70%,transparent_100%)] blur-[4px]"
             />
             {/* Viscous Liquid Core Highlight */}
             <motion.span
@@ -98,10 +98,10 @@ function NavItem({
                 left: liquidX,
                 top: liquidY,
               }}
-              className="absolute h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(34,211,238,0.42)_0%,rgba(168,85,247,0.22)_60%,transparent_100%)] blur-[2px]"
+              className="absolute h-6 w-6 -translate-x-1/2 -translate-y-1/2 rounded-full bg-[radial-gradient(circle,rgba(196,181,253,0.42)_0%,rgba(147,51,234,0.22)_60%,transparent_100%)] blur-[2px]"
             />
             {/* Subtle Liquid Perimeter Border Sheen */}
-            <div className="absolute inset-0 rounded-full border border-cyan-400/25 bg-gradient-to-r from-cyan-500/[0.08] via-violet-500/[0.08] to-blue-500/[0.08]" />
+            <div className="absolute inset-0 rounded-full border border-primary-light/25 bg-gradient-to-r from-primary/[0.08] via-violet-500/[0.08] to-indigo-500/[0.08]" />
           </motion.div>
         )}
       </AnimatePresence>
