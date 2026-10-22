@@ -12,6 +12,7 @@ import {
 interface SoundToggleProps {
   className?: string;
   compact?: boolean;
+  iconOnly?: boolean;
 }
 
 function subscribe(callback: () => void) {
@@ -27,7 +28,11 @@ function getServerSnapshot(): boolean {
   return false;
 }
 
-export default function SoundToggle({ className = "", compact = false }: SoundToggleProps) {
+export default function SoundToggle({
+  className = "",
+  compact = false,
+  iconOnly = false,
+}: SoundToggleProps) {
   const enabled = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
   useEffect(() => {
@@ -58,6 +63,27 @@ export default function SoundToggle({ className = "", compact = false }: SoundTo
   const toggleSound = () => {
     setSoundEnabled(!enabled);
   };
+
+  if (iconOnly) {
+    return (
+      <button
+        onClick={toggleSound}
+        type="button"
+        aria-label={enabled ? "Mute audio" : "Enable audio"}
+        aria-pressed={enabled}
+        title={enabled ? "Sound: ON (Click to mute)" : "Sound: OFF (Click to enable)"}
+        className={`group flex h-7 w-7 items-center justify-center rounded-full text-slate-300 transition-all duration-200 hover:bg-white/[0.08] hover:text-cyan-300 cursor-pointer ${
+          enabled ? "text-cyan-400" : "text-slate-400"
+        } ${className}`}
+      >
+        {enabled ? (
+          <Volume2 size={13} className="text-cyan-400 animate-pulse" />
+        ) : (
+          <VolumeX size={13} className="text-slate-400 group-hover:text-slate-200" />
+        )}
+      </button>
+    );
+  }
 
   return (
     <button

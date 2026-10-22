@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 import { personalInfo, education, internship, certifications, skillCategories } from "@/lib/constants";
 import { useLenis } from "lenis/react";
+import SoundToggle from "@/components/ui/SoundToggle";
 
 interface Message {
   id: string;
@@ -309,34 +310,41 @@ export default function AIAssistant() {
 
   return (
     <>
-      {/* 1. Floating Cosmic Trigger Pill Button */}
-      <div className="fixed bottom-6 right-6 z-40 select-none">
+      {/* 1. Right-Corner Navigation Utility Dock (Audio Symbol + REX AI) */}
+      <div className="fixed top-5 right-4 sm:right-6 z-50 flex items-center select-none">
         {!isOpen && (
-          <button
-            onClick={() => setIsOpen(true)}
-            className="group relative flex items-center gap-2.5 rounded-full border border-cyan-400/40 bg-[#030614]/90 px-4 py-2.5 shadow-[0_4px_24px_rgba(129,84,255,0.3)] backdrop-blur-xl transition-all duration-300 hover:scale-105 hover:border-cyan-300 hover:shadow-[0_4px_30px_rgba(56,189,248,0.45)] cursor-pointer active:scale-95"
-            aria-label="Open REX AI Assistant"
-          >
-            {/* Pulsing Starlight Beacon */}
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-75" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-cyan-500" />
-            </span>
+          <div className="flex items-center rounded-full border border-white/[0.1] bg-[#030614]/85 px-1.5 py-1 shadow-[0_4px_20px_rgba(0,0,0,0.5)] backdrop-blur-xl transition-all duration-300 hover:border-cyan-400/40 hover:shadow-[0_4px_24px_rgba(56,189,248,0.25)]">
+            {/* Audio Symbol Only */}
+            <SoundToggle iconOnly />
 
-            <Sparkles size={15} className="text-cyan-400 transition-transform duration-300 group-hover:rotate-12" />
-            <span className="font-display text-xs font-semibold tracking-wider text-white">
-              Ask REX
-            </span>
-            <span className="rounded-full bg-violet-600/30 px-2 py-0.5 font-mono text-[10px] text-violet-300">
-              AI
-            </span>
-          </button>
+            {/* Hairline Divider */}
+            <span className="mx-1 h-3.5 w-px bg-white/10" />
+
+            {/* REX AI Agent Trigger */}
+            <button
+              onClick={() => setIsOpen(true)}
+              className="group relative flex items-center gap-1.5 rounded-full px-2.5 py-1 text-slate-300 transition-all duration-200 hover:text-white cursor-pointer active:scale-95"
+              aria-label="Open REX AI Assistant"
+            >
+              <span className="relative flex h-2 w-2">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-75" />
+                <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-500" />
+              </span>
+              <Sparkles size={13} className="text-cyan-400 transition-transform duration-300 group-hover:rotate-12" />
+              <span className="font-display text-xs font-semibold tracking-wider text-white">
+                Ask REX
+              </span>
+              <span className="rounded-full bg-violet-600/30 px-1.5 py-0.2 font-mono text-[9px] text-violet-300">
+                AI
+              </span>
+            </button>
+          </div>
         )}
       </div>
 
-      {/* 2. Chat Drawer / Floating Modal */}
+      {/* 2. Chat Drawer / Floating Modal anchored to the Right Corner */}
       {isOpen && (
-        <div className="fixed bottom-4 right-4 z-50 flex h-[560px] max-h-[90vh] w-[92vw] max-w-[410px] flex-col overflow-hidden rounded-2xl border border-white/[0.12] bg-[#030614]/95 shadow-[0_12px_45px_rgba(0,0,0,0.85)] backdrop-blur-2xl transition-all duration-300 sm:bottom-6 sm:right-6">
+        <div className="fixed top-16 right-4 sm:right-6 sm:top-18 z-50 flex h-[560px] max-h-[85vh] w-[92vw] max-w-[410px] flex-col overflow-hidden rounded-2xl border border-white/[0.12] bg-[#030614]/95 shadow-[0_12px_45px_rgba(0,0,0,0.85)] backdrop-blur-2xl transition-all duration-300">
           {/* Ambient Cosmic Header Glow */}
           <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/50 via-violet-500/50 to-transparent pointer-events-none" />
 
@@ -363,6 +371,9 @@ export default function AIAssistant() {
             </div>
 
             <div className="flex items-center gap-1">
+              {/* Keep audio toggle accessible in chat header */}
+              <SoundToggle iconOnly />
+              <span className="h-3 w-px bg-white/10 mx-0.5" />
               <button
                 onClick={handleClear}
                 className="flex h-7 w-7 items-center justify-center rounded-lg text-slate-400 transition-colors hover:bg-white/[0.06] hover:text-white cursor-pointer"
