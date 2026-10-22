@@ -10,7 +10,6 @@ import GalaxyParticles from "./GalaxyParticles";
 import StarField from "./StarField";
 import SolarSystem from "./SolarSystem";
 import ScrollCamera from "./ScrollCamera";
-import CosmicNebula from "./CosmicNebula";
 import CosmicCrossLight from "./CosmicCrossLight";
 import { useQuality } from "@/hooks/useQuality";
 import {
@@ -77,7 +76,6 @@ export default function GalaxyCanvas() {
           />
           <SceneReadySignal />
           <ScrollCamera />
-          <CosmicNebula />
           <StarField />
           <CosmicCrossLight />
           <GalaxyParticles />
