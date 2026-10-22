@@ -1,15 +1,7 @@
 "use client";
 
 import { personalInfo, navLinks } from "@/lib/constants";
-import {
-  ArrowUp,
-  Github,
-  Linkedin,
-  Instagram,
-  Mail,
-  Globe,
-  MapPin,
-} from "lucide-react";
+import { ArrowUp, Github, Linkedin, Instagram, Mail, Globe } from "lucide-react";
 import { useLenis } from "lenis/react";
 
 const socialIcons: Record<
@@ -27,7 +19,7 @@ export default function Footer() {
   const lenis = useLenis();
 
   const scrollToTop = () => {
-    if (lenis) lenis.scrollTo(0, { duration: 2 });
+    if (lenis) lenis.scrollTo(0, { duration: 1.8 });
   };
 
   const scrollToSection = (href: string) => {
@@ -38,19 +30,16 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative overflow-hidden border-t border-white/[0.08] bg-[#030614]/90 backdrop-blur-xl">
-      {/* Ambient Top Glow Line */}
+    <footer className="relative border-t border-white/[0.08] bg-[#030614]/90 backdrop-blur-xl">
+      {/* Subtle Ambient Top Border Glow */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/30 via-violet-400/30 to-transparent pointer-events-none" />
 
-      {/* Atmospheric Nebula Background Accent */}
-      <div className="pointer-events-none absolute -bottom-24 left-1/2 h-72 w-[500px] -translate-x-1/2 rounded-full bg-gradient-to-tr from-cyan-500/5 via-violet-500/10 to-transparent blur-[120px]" />
-
-      <div className="relative mx-auto max-w-6xl px-6 pt-12 pb-8 sm:px-8">
-        {/* Main Footer Grid */}
-        <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-12 lg:gap-12 pb-10 border-b border-white/[0.06]">
-          {/* Col 1: Brand & Mission (5 Cols) */}
-          <div className="space-y-4 lg:col-span-5">
-            <div className="flex items-center gap-2.5">
+      <div className="relative mx-auto max-w-6xl px-6 py-10 sm:px-8">
+        {/* Main Simple Row */}
+        <div className="flex flex-col items-center justify-between gap-6 pb-8 border-b border-white/[0.06] md:flex-row">
+          {/* Brand & Title */}
+          <div className="flex flex-col items-center gap-1.5 text-center md:items-start md:text-left">
+            <div className="flex items-center gap-2">
               <span className="relative flex h-2 w-2">
                 <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-cyan-400 opacity-75" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-cyan-500" />
@@ -59,96 +48,69 @@ export default function Footer() {
                 {personalInfo.brand}
               </span>
               <span className="h-3 w-px bg-white/10" />
-              <span className="font-mono text-[10px] uppercase tracking-widest text-cyan-400">
-                {personalInfo.experienceTitle}
+              <span className="font-mono text-xs text-cyan-400">
+                {personalInfo.title}
               </span>
             </div>
-
-            <p className="max-w-sm text-xs sm:text-sm leading-relaxed text-slate-300">
-              Crafting intelligent computer vision systems, edge AI applications,
-              and modern interactive web experiences.
+            <p className="font-display text-xs tracking-wider text-slate-400 uppercase">
+              {personalInfo.tagline}
             </p>
-
-            <div className="pt-1">
-              <span className="inline-block font-display text-xs font-semibold tracking-widest uppercase bg-gradient-to-r from-violet-300 via-indigo-200 to-cyan-300 bg-clip-text text-transparent">
-                {personalInfo.tagline}
-              </span>
-            </div>
           </div>
 
-          {/* Col 2: Navigation Links (3 Cols) */}
-          <div className="space-y-3 lg:col-span-3">
-            <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400">
-              Navigation
-            </span>
-            <ul className="grid grid-cols-2 gap-2 pt-1 text-xs">
+          {/* Simple Navigation Links */}
+          <nav aria-label="Footer navigation">
+            <ul className="flex flex-wrap items-center justify-center gap-6 text-xs text-slate-300">
               {navLinks.map((link) => (
                 <li key={link.href}>
                   <button
                     onClick={() => scrollToSection(link.href)}
-                    className="text-slate-300 transition-colors duration-200 hover:text-cyan-400 text-left cursor-pointer"
+                    className="transition-colors duration-200 hover:text-cyan-400 cursor-pointer"
                   >
                     {link.label}
                   </button>
                 </li>
               ))}
             </ul>
-          </div>
+          </nav>
 
-          {/* Col 3: Direct Connect & Telemetry (4 Cols) */}
-          <div className="space-y-3 lg:col-span-4">
-            <span className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-slate-400">
-              Operational Base
-            </span>
-            <div className="flex items-center gap-2 pt-1 text-xs text-slate-300">
-              <MapPin size={13} className="text-cyan-400 shrink-0" />
-              <span>{personalInfo.location}</span>
-            </div>
-
-            <div className="pt-2">
-              <span className="block font-mono text-[10px] font-semibold uppercase tracking-[0.2em] text-slate-400 mb-2">
-                Verified Channels
-              </span>
-              <div className="flex flex-wrap items-center gap-2">
-                {personalInfo.socials.map((social) => {
-                  const Icon = socialIcons[social.icon] || Mail;
-                  return (
-                    <a
-                      key={social.name}
-                      href={social.url}
-                      target={social.url.startsWith("mailto") ? undefined : "_blank"}
-                      rel="noopener noreferrer"
-                      className="group flex h-8 w-8 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.03] transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-cyan-300 text-slate-300"
-                      aria-label={social.name}
-                    >
-                      <Icon size={14} />
-                    </a>
-                  );
-                })}
-              </div>
-            </div>
+          {/* Social Links */}
+          <div className="flex items-center gap-2.5">
+            {personalInfo.socials.map((social) => {
+              const Icon = socialIcons[social.icon] || Mail;
+              return (
+                <a
+                  key={social.name}
+                  href={social.url}
+                  target={social.url.startsWith("mailto") ? undefined : "_blank"}
+                  rel="noopener noreferrer"
+                  className="flex h-8 w-8 items-center justify-center rounded-lg border border-white/[0.08] bg-white/[0.03] text-slate-300 transition-all duration-200 hover:-translate-y-0.5 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-cyan-300"
+                  aria-label={social.name}
+                >
+                  <Icon size={14} />
+                </a>
+              );
+            })}
           </div>
         </div>
 
-        {/* Bottom Bar / Telemetry Strip */}
-        <div className="mt-8 flex flex-col items-center justify-between gap-4 text-xs text-slate-400 sm:flex-row">
-          <p className="text-slate-400/80">
+        {/* Simple Bottom Row */}
+        <div className="pt-6 flex flex-col items-center justify-between gap-4 text-xs text-slate-400 sm:flex-row">
+          <p>
             &copy; {new Date().getFullYear()} {personalInfo.name}. All rights reserved.
           </p>
 
-          {/* Hidden test compatibility */}
-          <span className="sr-only" aria-hidden="true">
+          <p className="text-slate-400/90 font-mono text-[11px]">
             Built with Next.js, Three.js &amp; GSAP
-          </span>
+          </p>
 
           <button
             onClick={scrollToTop}
-            className="group inline-flex items-center gap-2 rounded-full border border-white/[0.08] bg-white/[0.03] px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-slate-300 transition-all duration-200 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-cyan-300 cursor-pointer"
+            className="group inline-flex items-center gap-1.5 rounded-full border border-white/[0.08] bg-white/[0.03] px-3.5 py-1.5 font-mono text-[11px] uppercase tracking-wider text-slate-300 transition-all duration-200 hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-cyan-300 cursor-pointer"
             aria-label="Back to top"
           >
             <span>Back to top</span>
             <ArrowUp
-              size={13}
+              size={12}
               className="text-cyan-400 transition-transform duration-200 group-hover:-translate-y-0.5"
             />
           </button>
