@@ -1,6 +1,7 @@
 import Navigation from "@/components/layout/Navigation";
 import CustomCursor from "@/components/layout/CustomCursor";
 import AIAssistant from "@/components/ai/AIAssistant";
+import CommandPalette from "@/components/ui/CommandPalette";
 import Footer from "@/components/layout/Footer";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
@@ -114,6 +115,7 @@ export default function Home() {
       </main>
 
       <AIAssistant />
+      <CommandPalette />
       <CustomCursor />
     </>
   );

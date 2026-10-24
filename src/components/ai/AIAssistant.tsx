@@ -8,6 +8,7 @@ import {
   Send,
   RotateCcw,
   ExternalLink,
+  Search,
 } from "lucide-react";
 import { personalInfo, education, internship, certifications, skillCategories } from "@/lib/constants";
 import { useLenis } from "lenis/react";
@@ -248,6 +249,12 @@ export default function AIAssistant() {
     }
   }, [messages, isOpen, scrollToBottom]);
 
+  useEffect(() => {
+    const handleOpenRex = () => setIsOpen(true);
+    window.addEventListener("open-rex-assistant", handleOpenRex);
+    return () => window.removeEventListener("open-rex-assistant", handleOpenRex);
+  }, []);
+
   // Handle action triggers (scroll or external link)
   const handleAction = (act: { action: string; href?: string }) => {
     if (act.action === "scroll" && act.href) {
@@ -319,6 +326,22 @@ export default function AIAssistant() {
 
             {/* Hairline Divider */}
             <span className="mx-1 h-3.5 w-px bg-white/10" />
+
+            {/* Command Palette Trigger (Ctrl+K / Cmd+K) */}
+            <button
+              onClick={() => window.dispatchEvent(new CustomEvent("open-command-palette"))}
+              className="group hidden sm:flex items-center gap-1 rounded-full px-2 py-1 text-slate-300 transition-all duration-200 hover:text-cyan-300 cursor-pointer active:scale-95"
+              aria-label="Open Command Palette"
+              title="Search commands & teleport (Ctrl+K / ⌘K)"
+            >
+              <Search size={12} className="text-slate-400 transition-colors group-hover:text-cyan-300" />
+              <kbd className="rounded border border-white/10 bg-white/[0.06] px-1 py-0.2 font-mono text-[9px] text-slate-400 group-hover:text-cyan-300">
+                ⌘K
+              </kbd>
+            </button>
+
+            {/* Hairline Divider */}
+            <span className="hidden sm:inline-block mx-1 h-3.5 w-px bg-white/10" />
 
             {/* REX AI Agent Trigger */}
             <button
