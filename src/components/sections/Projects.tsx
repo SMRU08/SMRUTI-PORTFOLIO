@@ -8,12 +8,13 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 import ReticleCorners from "@/components/ui/ReticleCorners";
 import { ProjectArchitectureXRay } from "./ProjectInteractiveDemo";
 
-const PLANET_NAMES = ["Earth", "Mars", "Jupiter", "Saturn"];
+const PLANET_NAMES = ["Earth", "Mars", "Jupiter", "Saturn", "Neptune"];
 const PROJECT_TELEMETRY = [
   "⚡ 28ms · PPE Detection Engine",
   "⚡ Edge AI · Offline Translation",
   "⚡ 30 FPS · 68-Pt Landmark Tracker",
   "⚡ 22ms · Emotion Vectorizer",
+  "⚡ Sub-20ms · Neural Agent Core",
 ];
 
 export function ProjectsHeader() {

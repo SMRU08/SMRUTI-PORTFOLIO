@@ -78,12 +78,12 @@ export default function ContactForm() {
             Transmission Received
           </h3>
           <p className="mt-2 max-w-sm text-sm text-slate-300">
-            Message sent — thanks! Your inquiry has been routed to my primary inbox and I&apos;ll get back to you promptly.
+            Message sent — thanks! Your inquiry has been routed directly to <span className="text-cyan-300 font-mono">smrutiranjan2412@gmail.com</span> and I&apos;ll get back to you promptly.
           </p>
           <button
             type="button"
             onClick={() => setStatus({ kind: "idle" })}
-            className="group mt-6 inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-slate-300 transition-all hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-white"
+            className="group mt-6 inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.04] px-5 py-2.5 text-xs font-semibold uppercase tracking-widest text-slate-300 transition-all hover:border-cyan-400/40 hover:bg-cyan-400/10 hover:text-white cursor-pointer"
           >
             <span>Send another</span>
             <Sparkles size={13} className="text-cyan-400 transition-transform group-hover:rotate-12" />
@@ -111,8 +111,8 @@ export default function ContactForm() {
             SEND A MESSAGE
           </span>
         </div>
-        <span className="font-mono text-[10px] text-slate-500">
-          DIRECT INBOX
+        <span className="font-mono text-[10px] text-cyan-400/80">
+          DELIVERS TO: SMRUTIRANJAN2412@GMAIL.COM
         </span>
       </div>
 
@@ -222,7 +222,17 @@ export default function ContactForm() {
             className="flex items-start gap-2.5 rounded-xl border border-red-500/30 bg-red-500/10 p-3.5 text-sm text-red-300"
           >
             <AlertCircle size={16} className="mt-0.5 shrink-0 text-red-400" />
-            <span>{status.message}</span>
+            <div className="space-y-1">
+              <span>{status.message}</span>
+              <div>
+                <a
+                  href="mailto:smrutiranjan2412@gmail.com?subject=Portfolio%20Inquiry"
+                  className="font-medium text-cyan-300 underline hover:text-white"
+                >
+                  Click here to email directly at smrutiranjan2412@gmail.com &rarr;
+                </a>
+              </div>
+            </div>
           </div>
         )}
 
@@ -231,7 +241,7 @@ export default function ContactForm() {
           <button
             type="submit"
             disabled={sending}
-            className="group relative inline-flex w-full items-center justify-center gap-2.5 overflow-hidden rounded-xl bg-gradient-to-r from-cyan-500 via-primary to-blue-600 px-7 py-3.5 text-sm font-semibold tracking-wide text-white shadow-[0_0_25px_rgba(56,189,248,0.25)] transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_0_35px_rgba(56,189,248,0.45)] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:scale-100 sm:w-auto"
+            className="group relative inline-flex w-full items-center justify-center gap-2.5 overflow-hidden rounded-xl bg-gradient-to-r from-cyan-500 via-primary to-blue-600 px-7 py-3.5 text-sm font-semibold tracking-wide text-white shadow-[0_0_25px_rgba(56,189,248,0.25)] transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_0_35px_rgba(56,189,248,0.45)] active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:scale-100 sm:w-auto cursor-pointer"
           >
             <span className="pointer-events-none absolute inset-0 bg-white/10 opacity-0 transition-opacity group-hover:opacity-100" />
             {sending ? (

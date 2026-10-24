@@ -89,10 +89,14 @@ describe("sendContactEmail", () => {
     await expect(sendContactEmail(VALID)).rejects.toThrow(/RESEND_API_KEY/);
   });
 
-  it("throws when CONTACT_TO_EMAIL is missing", async () => {
+  it("defaults to personal email when CONTACT_TO_EMAIL is missing", async () => {
     delete process.env.CONTACT_TO_EMAIL;
+    sendMock.mockResolvedValueOnce({ data: { id: "msg_fallback" }, error: null });
     const { sendContactEmail } = await import("@/lib/email");
 
-    await expect(sendContactEmail(VALID)).rejects.toThrow(/CONTACT_TO_EMAIL/);
+    await sendContactEmail(VALID);
+    expect(sendMock).toHaveBeenCalledOnce();
+    const arg = sendMock.mock.calls[0][0];
+    expect(arg.to).toBe("smrutiranjan2412@gmail.com");
   });
 });

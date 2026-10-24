@@ -124,6 +124,25 @@ export const projects: Project[] = [
     githubUrl: "https://github.com/SMRU08",
     featured: true,
   },
+  {
+    id: "rex-ai-agent",
+    title: "REX — Autonomous AI Agent & Knowledge Engine",
+    description:
+      "A real-time intelligent portfolio agent and dynamic telemetry system featuring voice interaction, project insights, and autonomous 3D solar system flythrough navigation.",
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Three.js",
+      "Web Audio API",
+      "NLP",
+      "Tailwind CSS",
+    ],
+    image: "",
+    githubUrl: "https://github.com/SMRU08/SMRUTI-PORTFOLIO",
+    demoUrl: "https://smrutiportfolio.vercel.app/",
+    hasDemo: true,
+    featured: true,
+  },
 ];
 
 // More practical work & hackathon projects

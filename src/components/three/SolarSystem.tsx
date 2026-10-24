@@ -19,6 +19,7 @@ export const planetPositions: THREE.Vector3[] = [
   new THREE.Vector3(),
   new THREE.Vector3(),
   new THREE.Vector3(),
+  new THREE.Vector3(),
 ];
 
 // ===================== CINEMATIC STELLAR SURFACE SHADER =====================
@@ -260,6 +261,17 @@ const PLANET_CONFIGS: PlanetConfig[] = [
     twilightColor: "#c29b46",
     tilt: 0.47,
     hasRing: true,
+    isEarth: false,
+  },
+  {
+    orbitRadius: 26.5,
+    orbitSpeed: 0.014,
+    size: 1.35,
+    texture: "/textures/2k_neptune.webp",
+    atmosphereColor: "#38bdf8",
+    twilightColor: "#1d4ed8",
+    tilt: 0.49,
+    hasRing: false,
     isEarth: false,
   },
 ];

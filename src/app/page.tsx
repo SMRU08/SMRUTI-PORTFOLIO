@@ -77,6 +77,14 @@ export default function Home() {
           >
             <ProjectDetail index={3} />
           </section>
+
+          <section
+            id="project-4"
+            aria-label="Project: REX AI Assistant & Knowledge Engine"
+            className="h-screen"
+          >
+            <ProjectDetail index={4} />
+          </section>
         </ProjectSnapZone>
 
         <section

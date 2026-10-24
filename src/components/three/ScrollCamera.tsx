@@ -39,7 +39,7 @@ interface Keyframe {
 }
 
 function buildDefaultKeyframes(): Keyframe[] {
-  const S = 1 / 8;
+  const S = 1 / 9;
   return [
     { t: 0, pos: [0, 3.8, 17.5], look: [0, 0, 0], planet: -1 },
     { t: S * 0.8, pos: [0, 1.4, 7.2], look: [0, 0, 0], planet: -1 },
@@ -54,8 +54,9 @@ function buildDefaultKeyframes(): Keyframe[] {
     { t: S * 4, pos: [0, 0, 0], look: [0, 0, 0], planet: 1 },
     { t: S * 5, pos: [0, 0, 0], look: [0, 0, 0], planet: 2 },
     { t: S * 6, pos: [0, 0, 0], look: [0, 0, 0], planet: 3 },
+    { t: S * 7, pos: [0, 0, 0], look: [0, 0, 0], planet: 4 },
     {
-      t: S * 7,
+      t: S * 8,
       pos: [SC.x - 7, 13, SC.z + 24],
       look: [SC.x, 0, SC.z],
       planet: -1,
@@ -80,9 +81,9 @@ function computeKeyframes(): Keyframe[] {
     k.t = Math.max(0, Math.min(1, top / max));
   }
 
-  const lastPlanetIdx = kf.findIndex((k) => k.planet === 3);
+  const lastPlanetIdx = kf.findIndex((k) => k.planet === 4);
   if (lastPlanetIdx >= 0 && lastPlanetIdx + 1 < kf.length) {
-    const lastEl = document.getElementById("project-3");
+    const lastEl = document.getElementById("project-4");
     if (lastEl) {
       const bottom = lastEl.getBoundingClientRect().bottom + window.scrollY;
       kf[lastPlanetIdx + 1].t = Math.max(

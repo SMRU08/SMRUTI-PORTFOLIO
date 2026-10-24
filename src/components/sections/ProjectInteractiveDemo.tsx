@@ -56,6 +56,18 @@ export function ProjectArchitectureXRay({ index }: ProjectArchitectureProps) {
         { label: "HUD Visualization", detail: "Dynamic bounding box & micro-expression indicator" },
       ],
     },
+    // 4: REX AI Assistant Architecture
+    {
+      title: "REX Neural Copilot & Agent Pipeline",
+      latency: "15ms Real-Time Inference",
+      steps: [
+        { label: "Telemetry Stream", detail: "Multi-modal user input, voice commands & live UI context" },
+        { label: "Semantic Tokenizer", detail: "Intent categorization & contextual portfolio query routing" },
+        { label: "Neural Knowledge Engine", detail: "Structured knowledge base indexing with fallback inference" },
+        { label: "Lenis Camera Director", detail: "Real-time 3D planetary flythrough & sector focus control" },
+        { label: "Web Audio Synthesizer", detail: "Low-latency reactive audio dispatch & synthesized voice delivery" },
+      ],
+    },
   ];
 
   const currentPipeline = PIPELINES[index] ?? PIPELINES[0]!;
